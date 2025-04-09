@@ -1,24 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AWS Generative AI Meetup Chatbot (Cloudflare)
+
+A Next.js-based chatbot application that leverages Cloudflare's Workers AI platform to provide an interactive chat experience using Meta's Llama 2 model.
+
+## Features
+
+- 🤖 AI-powered chat interface using Cloudflare Workers AI
+- ⚡ Built with Next.js 15 and React 19
+- 🎨 Modern UI with Tailwind CSS
+- 🚀 Cloudflare deployment ready
+- 💬 Streaming responses for real-time interaction
+
+## Prerequisites
+
+- Node.js 18.17 or later
+- Cloudflare account with Workers AI access
+- Wrangler CLI installed
+
+## Project Structure
+
+```
+├── app/                  # Next.js app directory
+│   ├── api/             # API routes
+│   └── page.tsx         # Main page
+├── components/          # React components
+├── lib/                 # Utility functions
+├── public/             # Static assets
+└── .dev.vars           # Local development variables
+```
 
 ## Getting Started
 
-First, run the development server:
-
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <repository-url>
+cd aws-generative-ai-meetup-chatbot-cloudflare
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Set up your environment variables in `.dev.vars`:
+```
+AI_API_TOKEN=your-cloudflare-ai-api-token
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Run the development server:
+```bash
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) to view the application.
+
+## Available Scripts
+
+- `npm run dev` - Start development server with Turbopack
+- `npm run build` - Build the application
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
+- `npm run deploy` - Deploy to Cloudflare
+- `npm run preview` - Preview Cloudflare deployment locally
+- `npm run cf-typegen` - Generate Cloudflare environment types
+
+## Deployment
+
+This project is configured for deployment to Cloudflare using the OpenNext.js adapter. To deploy:
+
+1. Ensure you have the Cloudflare Wrangler CLI configured
+2. Run the deploy command:
+```bash
+npm run deploy
+```
+
+## Technologies
+
+- [Next.js](https://nextjs.org/) - React framework
+- [Cloudflare Workers AI](https://developers.cloudflare.com/workers-ai/) - AI platform
+- [Tailwind CSS](https://tailwindcss.com/) - CSS framework
+- [Radix UI](https://www.radix-ui.com/) - UI components
+- [workers-ai-provider](https://www.npmjs.com/package/workers-ai-provider) - Cloudflare AI integration
+
+## License
+
+This project is MIT licensed.
 
 ## Learn More
 
